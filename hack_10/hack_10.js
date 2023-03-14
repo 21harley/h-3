@@ -52,6 +52,5 @@ result.levels=levels.map((el)=>{
     aux=aux[0].toUpperCase()+aux[1];
     return {'LEVEL':aux};
 })
-console.log(result);
 //export result
 module.exports = result; 

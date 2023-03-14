@@ -15,6 +15,5 @@ do{
     }
     i++;
 }while(i<arr.length);
-console.log(result);
 //export result
 module.exports = result;
