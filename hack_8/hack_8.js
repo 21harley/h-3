@@ -13,7 +13,9 @@ let foo = {
     role:"admin"
 };
 let result = [];
-
+for (const key in foo) {
+    result.push([key,foo[key]]);
+}
 
 //export result
 module.exports = result; 

@@ -11,7 +11,7 @@ let foo = {
     skills:["javascript", "html", "css", "python", "flask", "react", "redux"]
 };
 let result;
-
+result=foo['skills'].map((el)=>el);
 
 //export result
 module.exports = result; 

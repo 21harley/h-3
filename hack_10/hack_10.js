@@ -27,8 +27,31 @@ let roleSuperUser = "SUPER_USER";
 let roleUser = "USER";
 let skills = ["git","github","docker","deploy"];
 let levels = [{LEVEL:"l-1"},{LEVEL:"l-2"},{LEVEL:"l-3"}];
-let result;
-
-
+function capital(name){
+    return name.slice(0,1).toUpperCase()+name.slice(1,name.length);
+}
+let result=Object.assign({},foo);
+result.name=capital(result.name);
+result.roles=[result.roles[0].toUpperCase(),roleSuperUser,roleUser];
+skills=skills.map((el)=>{
+    return capital(el);
+});
+result.skills=[
+        skills[0],skills[1],capital(result.skills[0]),
+        result.skills[1].toUpperCase(),result.skills[2].toUpperCase(),
+        skills[2],
+        capital(result.skills[3]),
+        capital(result.skills[4]),
+        capital(result.skills[5]),
+        capital(result.skills[6]),
+        skills[3]
+]
+delete result.alias;
+result.levels=levels.map((el)=>{
+    let aux=el["LEVEL"].replace('-','');
+    aux=aux[0].toUpperCase()+aux[1];
+    return {'LEVEL':aux};
+})
+console.log(result);
 //export result
 module.exports = result; 

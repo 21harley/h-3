@@ -8,7 +8,13 @@
 */
 let arr = [{a:1},{b:2},{c:3},{d:4},{e:5}];
 let result = [];
- 
- 
+let i=0;
+do{
+    for (const key in arr[i]) {
+        result.push(arr[i][key]); break;
+    }
+    i++;
+}while(i<arr.length);
+console.log(result);
 //export result
 module.exports = result;

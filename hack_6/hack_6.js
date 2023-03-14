@@ -15,7 +15,8 @@ let result = {
     name:"foo",
     role:"admin"
 };
-
+result.name=result.name.slice(0,1).toUpperCase()+result.name.slice(1,result.name.length);
+result.role=result.role.toUpperCase();
  
 //export result
 module.exports = result; 

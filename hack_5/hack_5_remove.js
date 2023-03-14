@@ -12,7 +12,7 @@ let result = {
     name:"foo",
     role:"admin"
 };
+delete result.role;
 
- 
 //export result
 module.exports = result; 
